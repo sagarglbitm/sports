@@ -11,6 +11,7 @@ import logo from "../../Assets/logo5.png"
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+
   
   const navigate = useNavigate();
 
@@ -28,10 +29,10 @@ const Navbar = () => {
  }
  const handleLogout = () => {
   localStorage.removeItem('accessToken')
-  const name=localStorage.getItem('name')
-
+  localStorage.removeItem('sapid')
   localStorage.removeItem('refreshToken')
   localStorage.removeItem("name")
+  window.location.reload();
   navigate('/')
   // localStorage.removeItem('name')
 
